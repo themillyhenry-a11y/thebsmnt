@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>THE BSMNT — Glasgow</title>
+<meta name="description" content="THE BSMNT. Bar, live music and club nights in Glasgow. Glasgow needed this.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+
+<!-- Reusable logo symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 606 606">
+    <path fill="currentColor" d="M50 199 L142 134 L142 49 Q142 42 149 42 L193 42 Q200 42 200 49 L200 93 L303 20 Q306 18 309 20 L556 199 Q566 208 556 216 L522 216 L522 359 L580 359 Q590 372 580 386 L522 386 L522 589 Q522 597 514 597 L92 597 Q84 597 84 589 L84 386 L26 386 Q16 372 26 359 L84 359 L84 216 L50 216 Q40 208 50 199 Z"/>
+    <g fill="#0b0b0b">
+      <text x="88" y="369" font-family="Anton, Impact, sans-serif" font-size="112" textLength="130" lengthAdjust="spacingAndGlyphs">THE</text>
+      <rect x="102" y="380" width="404" height="24"/>
+      <text x="104" y="506" font-family="Anton, Impact, sans-serif" font-size="128" textLength="272" lengthAdjust="spacingAndGlyphs">BSMNT</text>
+    </g>
+    <path fill="none" stroke="#0b0b0b" stroke-width="13" stroke-linejoin="miter" d="M500 404 V432 H452 V460 H372 M322 506 V522 H282 V546 H242 V556 H108 V404"/>
+  </symbol>
+</svg>
+
+<!-- Grain + transition layers -->
+<div class="grain" aria-hidden="true"></div>
+<div class="stairs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader__mark"><svg><use href="#logo"/></svg></div>
+  <div class="loader__meta mono">
+    <span>Descending</span>
+    <span class="loader__level">G</span>
+  </div>
+</div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo" aria-label="THE BSMNT — home">
+    <svg><use href="#logo"/></svg>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#crew"><span>01</span>Work With Us</a>
+    <a href="#events"><span>02</span>Events</a>
+    <a href="#venue"><span>03</span>Venue</a>
+    <a href="#gallery"><span>04</span>Gallery</a>
+    <a href="#join"><span>05</span>Get Involved</a>
+  </nav>
+  <div class="nav__right mono">
+    <span class="nav__clock"><i class="dot"></i>GLA <time id="clock">--:--</time></span>
+    <a href="#events" class="nav__cta">Tickets</a>
+    <button class="nav__burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav>
+    <a href="#crew"><span class="mono">01</span>Work With Us</a>
+    <a href="#events"><span class="mono">02</span>Events</a>
+    <a href="#venue"><span class="mono">03</span>Venue</a>
+    <a href="#gallery"><span class="mono">04</span>Gallery</a>
+    <a href="#join"><span class="mono">05</span>Get Involved</a>
+  </nav>
+  <p class="mono menu__foot">Glasgow — Below street level</p>
+</div>
+
+<main id="top">
+
+  <!-- 1. HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__media" aria-hidden="true">
+      <!-- Drop a looping clip at assets/video/hero.mp4 and it takes over from the stills -->
+      <video class="hero__video" muted loop playsinline preload="none" data-src="assets/video/hero.mp4"></video>
+      <div class="hero__slide is-active" style="--img:url(assets/img/duct-wall.jpg); --pos: 30% 40%"></div>
+      <div class="hero__slide" style="--img:url(assets/img/coffers.jpg); --pos: 50% 70%"></div>
+      <div class="hero__slide" style="--img:url(assets/img/tubes.jpg); --pos: 80% 50%"></div>
+      <div class="hero__slide" style="--img:url(assets/img/speaker.jpg); --pos: 20% 20%"></div>
+      <div class="hero__beam"></div>
+      <div class="hero__shade"></div>
+    </div>
+
+    <div class="hero__top">
+      <h1 class="hero__tagline">
+        <span class="line"><span>Glasgow's new</span></span>
+        <span class="line"><span>home for sound</span></span>
+      </h1>
+      <div class="hero__side">
+        <ul class="hero__sub">
+          <li class="line"><span>Bar.</span></li>
+          <li class="line"><span>Live Music.</span></li>
+          <li class="line"><span>Club Nights.</span></li>
+        </ul>
+        <div class="hero__ctas">
+          <a href="#events" class="btn btn--solid" data-cursor="Listings">View Events <span class="arr">↓</span></a>
+          <a href="#about" class="btn" data-cursor="Read">About the Venue</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__ground">
+      <span class="hero__the" aria-hidden="true">The</span>
+      <span class="hero__rule"></span>
+      <span class="mono hero__level">Street level <b>↓ −1</b></span>
+    </div>
+
+    <div class="hero__word" aria-hidden="true">
+      <div class="hero__word-inner" data-split="chars">BSMNT</div>
+    </div>
+
+    <div class="hero__meta mono">
+      <span>55.8609° N / 4.2514° W</span>
+      <span class="hero__slide-count"><b id="slideNo">01</b> / 04</span>
+      <span>Scroll to descend</span>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Underground</span><i>/</i><span>Sound</span><i>/</i><span>After Dark</span><i>/</i><span>Basement Culture</span><i>/</i><span>Glasgow</span><i>/</i><span>Selectors</span><i>/</i><span>Late Nights</span><i>/</i><span>Community</span><i>/</i><span>Movement</span><i>/</i><span>Rhythm</span><i>/</i>
+      <span>Underground</span><i>/</i><span>Sound</span><i>/</i><span>After Dark</span><i>/</i><span>Basement Culture</span><i>/</i><span>Glasgow</span><i>/</i><span>Selectors</span><i>/</i><span>Late Nights</span><i>/</i><span>Community</span><i>/</i><span>Movement</span><i>/</i><span>Rhythm</span><i>/</i>
+    </div>
+  </div>
+
+  <!-- WORK WITH US -->
+  <section class="crew section" id="crew">
+    <header class="sec-head">
+      <div class="sec-head__index mono reveal"><span>01</span><span>Work With Us</span><span>Students &amp; DJs</span></div>
+      <h2 class="sec-head__title reveal-lines">
+        <span class="line"><span>Calling</span></span>
+        <span class="line"><span class="outline">all of you</span></span>
+      </h2>
+    </header>
+
+    <div class="calls">
+      <article class="call call--paper reveal" id="students">
+        <div class="call__top mono"><span>Students</span><span>01</span></div>
+        <h3 class="call__title">Calling<br>all<br>students</h3>
+        <p class="call__sub">Join our team.</p>
+        <ul class="call__perks">
+          <li><span class="mono">01</span>Free entry</li>
+          <li><span class="mono">02</span>Commission-based incentives</li>
+        </ul>
+        <div class="call__ctas">
+          <a href="https://instagram.com/thebsmntclub" target="_blank" rel="noopener" class="btn btn--ink" data-cursor="DM us">DM @thebsmntclub <span class="arr">→</span></a>
+          <a href="mailto:hello@thebsmnt.co.uk?subject=Join%20the%20team" class="call__mail mono">or email hello@thebsmnt.co.uk</a>
+        </div>
+      </article>
+
+      <article class="call call--cyan reveal" id="djs">
+        <div class="call__top mono"><span>DJs</span><span>02</span></div>
+        <h3 class="call__title">Calling<br>all<br>DJs</h3>
+        <p class="call__sub">Hit us up.</p>
+        <ul class="call__genres mono">
+          <li>Rap</li><li>Trap</li><li>Afro</li><li>Garage</li><li>Grime</li><li>R&amp;B</li>
+        </ul>
+        <div class="call__ctas">
+          <a href="https://instagram.com/thebsmntclub" target="_blank" rel="noopener" class="btn btn--ink" data-cursor="DM us">DM @thebsmntclub <span class="arr">→</span></a>
+          <a href="mailto:bookings@thebsmnt.co.uk?subject=DJ%20mix" class="call__mail mono">or send a mix to bookings@thebsmnt.co.uk</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- GLASGOW NEEDED THIS -->
+  <section class="needed" id="about">
+    <figure class="needed__art reveal">
+      <img src="assets/img/glasgow-needed-this.jpg" alt="Glasgow needed this — THE BSMNT" width="1194" height="1690" loading="lazy">
+    </figure>
+    <div class="needed__copy">
+      <div class="sec-head__index mono reveal"><span>00</span><span>What it is</span></div>
+      <ul class="needed__list">
+        <li class="reveal"><span class="mono">01</span>Bar</li>
+        <li class="reveal"><span class="mono">02</span>Live music</li>
+        <li class="reveal"><span class="mono">03</span>Club nights</li>
+      </ul>
+      <p class="needed__line reveal">One basement. Drinks early, live sets, then the lights go down.</p>
+    </div>
+  </section>
+
+  <!-- 2. EVENTS -->
+  <section class="events section" id="events">
+    <header class="sec-head">
+      <div class="sec-head__index mono reveal">
+        <span>02</span><span>Listings</span><span>Issue 001 — Autumn / Winter 26</span>
+      </div>
+      <h2 class="sec-head__title reveal-lines">
+        <span class="line"><span>What's on</span></span>
+        <span class="line"><span class="outline">downstairs</span></span>
+      </h2>
+      <p class="sec-head__note reveal">Club nights, live music and the bar. <br>Lineups land in the newsletter first.</p>
+    </header>
+
+    <p class="swipe mono" aria-hidden="true">Swipe for more nights <i>→</i></p>
+    <div class="posters">
+
+      <article class="ev reveal" data-cursor="Tickets">
+        <a href="#" class="ev__link" aria-label="Tickets — Opening Night, Saturday 17 October">
+          <div class="poster poster--cyan">
+            <div class="poster__in">
+              <div class="poster__top mono"><span>BSMNT/001</span><span>Opening Weekend</span></div>
+              <div class="poster__huge poster__huge--tight">Opening<br>Night</div>
+              <div class="poster__band">Lineup TBA</div>
+              <div class="poster__foot mono"><span>23:00—03:00</span><span>17.10</span></div>
+            </div>
+          </div>
+          <div class="ev__meta">
+            <div class="ev__date"><b>Sat 17</b> Oct</div>
+            <h3 class="ev__artist">Opening Night <em>— Lineup TBA</em></h3>
+            <div class="ev__row mono"><span>Rap / R&amp;B</span><span class="ev__tix">Tickets <i>→</i></span></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="ev reveal" data-cursor="Tickets">
+        <a href="#" class="ev__link" aria-label="Tickets — Rap and Trap, Saturday 24 October">
+          <div class="poster poster--photo" style="--img:url(assets/img/coffers.jpg)">
+            <div class="poster__in">
+              <div class="poster__top mono"><span>Stairwell</span><span>001</span></div>
+              <div class="poster__stack">
+                <span>Rap</span>
+                <span class="b2b mono">and</span>
+                <span>Trap</span>
+              </div>
+              <div class="poster__foot mono"><span>Lineup TBA</span><span>24.10</span></div>
+            </div>
+          </div>
+          <div class="ev__meta">
+            <div class="ev__date"><b>Sat 24</b> Oct</div>
+            <h3 class="ev__artist">Rap &amp; Trap <em>— Stairwell 001</em></h3>
+            <div class="ev__row mono"><span>Rap / Trap</span><span class="ev__tix">Tickets <i>→</i></span></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="ev reveal" data-cursor="Tickets">
+        <a href="#" class="ev__link" aria-label="Tickets — Afro Night, Friday 30 October">
+          <div class="poster poster--orange">
+            <div class="poster__in">
+              <div class="poster__cone" aria-hidden="true"></div>
+              <div class="poster__top mono"><span>Afro Session</span><span>Vol. 1</span></div>
+              <div class="poster__huge poster__huge--tight">Afro<br>Night</div>
+              <div class="poster__foot mono"><span>Lineup TBA</span><span>30.10</span></div>
+            </div>
+          </div>
+          <div class="ev__meta">
+            <div class="ev__date"><b>Fri 30</b> Oct</div>
+            <h3 class="ev__artist">Afro Night <em>— Afro Session Vol. 1</em></h3>
+            <div class="ev__row mono"><span>Afro</span><span class="ev__tix">Tickets <i>→</i></span></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="ev reveal" data-cursor="Tickets">
+        <a href="#" class="ev__link" aria-label="Tickets — Grime Night, Saturday 31 October">
+          <div class="poster poster--paper">
+            <div class="poster__in">
+              <div class="poster__top mono"><span>After Dark</span><span>31.10.26</span></div>
+              <div class="poster__steps" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="poster__huge poster__huge--dark">Grime<br>Night</div>
+              <div class="poster__foot mono"><span>Lineup TBA</span><span>Hallowe'en</span></div>
+            </div>
+          </div>
+          <div class="ev__meta">
+            <div class="ev__date"><b>Sat 31</b> Oct</div>
+            <h3 class="ev__artist">Grime Night <em>— After Dark</em></h3>
+            <div class="ev__row mono"><span>Grime</span><span class="ev__tix">Tickets <i>→</i></span></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="ev reveal" data-cursor="Tickets">
+        <a href="#" class="ev__link" aria-label="Tickets — Garage, Friday 6 November">
+          <div class="poster poster--dots">
+            <div class="poster__in">
+              <div class="poster__top mono"><span>Club Night</span><span>06.11</span></div>
+              <div class="poster__vert">Garage</div>
+              <div class="poster__side">
+                <span class="poster__mid">All Night</span>
+                <span class="mono">UKG<br>2-Step<br>Bassline</span>
+              </div>
+              <div class="poster__foot mono"><span>22:00—03:00</span><span>Lineup TBA</span></div>
+            </div>
+          </div>
+          <div class="ev__meta">
+            <div class="ev__date"><b>Fri 06</b> Nov</div>
+            <h3 class="ev__artist">Garage <em>— All Night</em></h3>
+            <div class="ev__row mono"><span>Garage</span><span class="ev__tix">Tickets <i>→</i></span></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="ev reveal" data-cursor="Tickets">
+        <a href="#" class="ev__link" aria-label="Tickets — R&amp;B Lates, Saturday 14 November">
+          <div class="poster poster--tubes" style="--img:url(assets/img/tubes.jpg)">
+            <div class="poster__in">
+              <div class="poster__top mono"><span>Late Night</span><span>N°01</span></div>
+              <div class="poster__huge poster__huge--cyan">R&amp;B<br>Lates</div>
+              <div class="poster__band poster__band--ghost">Lineup TBA</div>
+              <div class="poster__foot mono"><span>R&amp;B</span><span>14.11</span></div>
+            </div>
+          </div>
+          <div class="ev__meta">
+            <div class="ev__date"><b>Sat 14</b> Nov</div>
+            <h3 class="ev__artist">R&amp;B Lates <em>— Lineup TBA</em></h3>
+            <div class="ev__row mono"><span>R&amp;B</span><span class="ev__tix">Tickets <i>→</i></span></div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <!-- Compact listing -->
+    <div class="listing">
+      <div class="listing__head mono reveal"><span>Also downstairs</span><span>Date</span><span>Sound</span><span>Entry</span></div>
+      <a href="#" class="listing__row reveal">
+        <span class="listing__name">Live Music <em>Bands and live sets in the bar</em></span>
+        <span class="mono">Thu 22.10</span><span class="mono">Live</span><span class="mono">Free <i>→</i></span>
+      </a>
+      <a href="#" class="listing__row reveal">
+        <span class="listing__name">Sunday Service <em>Daytime in the bar</em></span>
+        <span class="mono">Sun 01.11</span><span class="mono">Afro / R&amp;B</span><span class="mono">£6 <i>→</i></span>
+      </a>
+      <a href="#" class="listing__row reveal">
+        <span class="listing__name">Open Decks <em>Bring your USB</em></span>
+        <span class="mono">Thu 12.11</span><span class="mono">Anything</span><span class="mono">Free <i>→</i></span>
+      </a>
+      <a href="#" class="listing__row reveal">
+        <span class="listing__name">Stairwell 002 <em>Lineup in the newsletter first</em></span>
+        <span class="mono">Sat 21.11</span><span class="mono">Rap / Grime</span><span class="mono">Soon <i>→</i></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 3. VENUE -->
+  <section class="venue" id="venue">
+    <div class="venue__media">
+      <div class="venue__img" data-speed="0.12" style="--img:url(assets/img/coffers.jpg)"></div>
+      <div class="venue__caption mono"><span>Fig. 01</span><span>Main room, coffered ceiling</span></div>
+      <div class="venue__mark"><svg><use href="#logo"/></svg></div>
+    </div>
+    <div class="venue__copy">
+      <div class="sec-head__index mono reveal"><span>03</span><span>The Venue</span></div>
+      <h2 class="venue__title reveal-lines">
+        <span class="line"><span>Beneath</span></span>
+        <span class="line"><span>the city.</span></span>
+        <span class="line"><span class="cyan">Above</span></span>
+        <span class="line"><span class="cyan">expectations.</span></span>
+      </h2>
+      <p class="venue__lede reveal">A basement in the middle of Glasgow. Concrete, steel, a serious system and the people who know what to do with it.</p>
+
+      <ol class="pillars">
+        <li class="reveal"><span class="mono">01</span><h3>Sound</h3><p>Built around the system. Not the other way round.</p></li>
+        <li class="reveal"><span class="mono">02</span><h3>Atmosphere</h3><p>Low light. Low ceiling. Nothing between you and the music.</p></li>
+        <li class="reveal"><span class="mono">03</span><h3>Community</h3><p>Run with the collectives that keep this city moving.</p></li>
+        <li class="reveal"><span class="mono">04</span><h3>Independent</h3><p>No sponsors on the walls. No VIP rope. Just the room.</p></li>
+      </ol>
+
+      <dl class="facts mono reveal">
+        <div><dt>Rooms</dt><dd>One</dd></div>
+        <div><dt>Doors</dt><dd>Late</dd></div>
+        <div><dt>Phones</dt><dd>Pocketed</dd></div>
+        <div><dt>Ceiling</dt><dd>Low</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 4. GALLERY -->
+  <section class="gallery section" id="gallery">
+    <header class="sec-head sec-head--row">
+      <div class="sec-head__index mono reveal"><span>04</span><span>Gallery</span><span>Documented, not staged</span></div>
+      <h2 class="sec-head__title reveal-lines">
+        <span class="line"><span>Room <span class="outline">notes</span></span></span>
+      </h2>
+    </header>
+
+    <p class="swipe mono" aria-hidden="true">Swipe <i>→</i></p>
+    <div class="grid">
+      <figure class="g g--a reveal" data-cursor="View">
+        <div class="g__img" data-speed="-0.05" style="--img:url(assets/img/duct-wall.jpg); --pos: 50% 30%; --br: 1.9; --gs: 0"></div>
+        <figcaption class="mono"><span>02</span>Ducting, main room</figcaption>
+      </figure>
+      <figure class="g g--b reveal" data-cursor="View">
+        <div class="g__img" style="--img:url(assets/img/speaker.jpg); --pos: 15% 20%; --br: 2.2"></div>
+        <figcaption class="mono"><span>03</span>Ceiling, above the booth</figcaption>
+      </figure>
+      <div class="g g--type reveal">
+        <p>Light<br>is a<br><span class="cyan">material.</span></p>
+        <span class="mono">Fig. 04 — Lighting rig, in progress</span>
+      </div>
+      <figure class="g g--c reveal" data-cursor="View">
+        <div class="g__img" style="--img:url(assets/img/tubes.jpg); --pos: 70% 50%"></div>
+        <figcaption class="mono"><span>05</span>Tile, tube, mesh — corridor</figcaption>
+      </figure>
+      <figure class="g g--d reveal" data-cursor="View">
+        <div class="g__img" data-speed="0.05" style="--img:url(assets/img/coffers.jpg); --pos: 50% 60%; --br: 1.5"></div>
+        <figcaption class="mono"><span>06</span>Coffered ceiling, dancefloor</figcaption>
+      </figure>
+      <figure class="g g--e reveal" data-cursor="View">
+        <div class="g__img" style="--img:url(assets/img/ceiling-run.jpg); --br: 3; --gs: .3"></div>
+        <figcaption class="mono"><span>07</span>Services run, north wall</figcaption>
+      </figure>
+      <figure class="g g--f reveal" data-cursor="View">
+        <div class="g__img" style="--img:url(assets/img/tile-wall.jpg); --pos: 50% 50%"></div>
+        <figcaption class="mono"><span>08</span>Tile and tube, 04:12</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 6. NEWSLETTER -->
+  <section class="join" id="join">
+    <div class="join__bg" aria-hidden="true">
+      <span data-scrub="-0.6">Get Involved Get Involved Get Involved</span>
+    </div>
+    <div class="join__inner">
+      <div class="sec-head__index mono reveal"><span>05</span><span>Newsletter</span></div>
+      <h2 class="join__title reveal-lines"><span class="line"><span>Get involved.</span></span></h2>
+      <p class="join__sub reveal">Hear about releases, lineups and special events before anyone else.</p>
+      <form class="signup reveal" novalidate>
+        <label class="sr" for="email">Email address</label>
+        <input id="email" type="email" name="email" placeholder="Your email" autocomplete="email" required>
+        <button type="submit" data-cursor="Join">Sign up <i>→</i></button>
+        <p class="signup__msg mono" role="status" aria-live="polite"></p>
+      </form>
+      <p class="join__small mono reveal">One email a fortnight. Lineups first. No spam, ever.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- 7. FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__col">
+      <h4 class="mono">Find us</h4>
+      <p>THE BSMNT<br>Glasgow city centre<br>Full address on your ticket</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="mono">Contact</h4>
+      <p><a href="mailto:hello@thebsmnt.co.uk">hello@thebsmnt.co.uk</a><br><a href="mailto:bookings@thebsmnt.co.uk">bookings@thebsmnt.co.uk</a><br><a href="mailto:hires@thebsmnt.co.uk">Private hire</a></p>
+    </div>
+    <div class="footer__col">
+      <h4 class="mono">Social</h4>
+      <p><a href="https://instagram.com/thebsmntclub" target="_blank" rel="noopener">Instagram</a><br><a href="#">Resident Advisor</a><br><a href="#">SoundCloud</a><br><a href="#">TikTok</a></p>
+    </div>
+    <div class="footer__col">
+      <h4 class="mono">Newsletter</h4>
+      <form class="signup signup--mini" novalidate>
+        <label class="sr" for="email2">Email address</label>
+        <input id="email2" type="email" placeholder="Email" autocomplete="email" required>
+        <button type="submit" aria-label="Sign up">→</button>
+        <p class="signup__msg mono" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer__word" aria-hidden="true">
+    <svg class="footer__logo"><use href="#logo"/></svg>
+    <span>BSMNT</span>
+  </div>
+
+  <div class="footer__base mono">
+    <span>© 2026 THE BSMNT</span>
+    <span>Bar. Live Music. Club Nights.</span>
+    <span>Over 18s. ID required.</span>
+    <a href="#top">Back to street level ↑</a>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Quick links">
+  <a href="#students">Students</a>
+  <a href="#djs">DJs</a>
+  <a href="#events" class="dock__cta">Tickets</a>
+</nav>
+
+<div class="lightbox" aria-hidden="true"><div class="lightbox__img"></div><p class="mono lightbox__cap"></p><button class="lightbox__close mono" aria-label="Close">Close ×</button></div>
+
+<script src="main.js?v=7"></script>
+</body>
+</html>
